@@ -1,0 +1,165 @@
+.pl{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.pl__l, .pl__r{
+    position: absolute;
+    width: 51%;
+    height: 100%;
+    background: #222;
+    z-index: 1000;
+    -webkit-transition: 0.3s 0.4s;
+    -o-transition: 0.3s 0.4s;
+    transition: 0.3s 0.4s;
+}
+
+.pl__l{
+    left: 0;
+}
+
+.pl__r{
+    right: 0;
+}
+
+.loaded2 .pl{
+  visibility: hidden;
+}
+
+
+.loaded2 .pl__l{
+    -webkit-transform: translate(-100%);
+    -ms-transform: translate(-100%);
+    -o-transform: translate(-100%);
+    transform: translate(-100%);
+}
+
+.loaded2 .pl__r{
+    -webkit-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -o-transform: translate(100%);
+    transform: translate(100%);
+}
+
+.loaded2 .loader{
+    opacity: 0;
+}
+
+.loader{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1001;
+    transition: .5s;
+}
+
+.loader_o{
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    animation: spin 2.3s infinite linear;
+}
+
+.one{
+    border-bottom: 3px solid #ce3737;
+    top: 200px;
+}
+
+.two{
+    border-right: 3px solid #ce3737;
+    right: -200px;*/
+}
+
+.three{
+    border-top: 3px solid #ce3737;
+    bottom: 200px;
+}
+
+.four{
+    border-left: 3px solid #ce3737;
+    right: 200px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+    20%{opacity: 0.5;}
+    50%{opacity: 0.2;}
+    100%{opacity: 1;}
+    50%{opacity: 0.2;}
+    20%{opacity: 0.5;}
+}
+
+.loader_t{
+    width: 175px;
+    height: 175px;
+    position: absolute;
+    margin: auto;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    animation: spin2 2.3s infinite linear;
+    transform: rotate(45deg);
+}
+
+.five{
+    border-left: 3px solid #ce3737;
+    right: 141px;
+    bottom: 141px;
+}
+
+
+.sixt{
+    border-top: 3px solid #ce3737;
+    left: 141px;
+    bottom: 141px;
+}
+
+.seven{
+    border-right: 3px solid #ce3737;
+    left: 141px;
+    top: 141px;
+}
+
+.eight{
+    border-bottom: 3px solid #ce3737;
+    right: 141px;
+    bottom: -141px;
+}
+
+
+@keyframes spin2 {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(405deg);
+    }
+    
+    20%{opacity: 0.5;}
+    50%{opacity: 0.2;}
+    100%{opacity: 1;}
+    50%{opacity: 0.2;}
+    20%{opacity: 0.5;}
+}
